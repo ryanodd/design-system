@@ -1,0 +1,39 @@
+:root {
+  /* Stone colors */
+  --color-stone-50: #fafaf9;
+  --color-stone-100: #f5f5f4;
+  --color-stone-300: #d6d3d1;
+  --color-stone-500: #78716c;
+  --color-stone-700: #44403c;
+  --color-stone-800: #292524;
+  --color-stone-950: #0c0a09;
+
+  /* Gray colors */
+  --color-gray-500: #6b7280;
+  --color-gray-950: #030712;
+
+  /* Zinc colors */
+  --color-zinc-700: #3f3f46;
+
+  /* Green colors */
+  --color-green-500: #22c55e;
+  --color-green-700: #15803d;
+
+  /* Red colors */
+  --color-red-400: #f87171;
+  --color-red-500: #ef4444;
+  --color-red-600: #dc2626;
+
+  /* Sky colors */
+  --color-sky-300: #7dd3fc;
+  --color-sky-500: #0ea5e9;
+
+  /* Neutral colors */
+  --color-neutral-400: #a3a3a3;
+  --color-neutral-950: #0a0a0a;
+
+  /* Base colors */
+  --color-white: #ffffff;
+  --color-transparent: transparent;
+}
+

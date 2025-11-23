@@ -1,0 +1,30 @@
+.checkboxRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.checkboxRoot {
+  width: var(--size-6);
+  height: var(--size-6);
+  border: 1px solid var(--color-stone-700);
+  border-radius: var(--radius-sm);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkboxIndicator {
+  background-color: var(--color-sky-500);
+  border-radius: var(--radius-sm);
+}
+
+.checkboxCheckmarkIcon {
+  width: var(--size-4);
+  height: var(--size-4);
+}
+
+.checkboxLabel {
+  font-size: var(--text-base);
+  color: var(--color-stone-50);
+}

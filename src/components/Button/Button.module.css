@@ -1,0 +1,122 @@
+.button {
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: var(--spacing-2);
+}
+
+.button {
+  /* Default size: small */
+  padding-top: var(--spacing-1_5);
+  padding-bottom: var(--spacing-1_5);
+  padding-left: var(--spacing-3);
+  padding-right: var(--spacing-3);
+  border-radius: var(--radius-md);
+  font-size: var(--text-base);
+}
+
+.button[data-icon-only="true"] {
+  width: var(--size-10);
+  height: var(--size-10);
+  padding-left: var(--spacing-1);
+  padding-right: var(--spacing-1);
+  padding-top: var(--spacing-1);
+  padding-bottom: var(--spacing-1);
+}
+
+.button[data-size="large"] {
+  padding-top: var(--spacing-3);
+  padding-bottom: var(--spacing-3);
+  padding-left: var(--spacing-6);
+  padding-right: var(--spacing-6);
+  border-radius: var(--radius-lg);
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+}
+
+.button[data-icon-only="true"][data-size="large"] {
+  width: var(--size-12);
+  height: var(--size-12);
+  padding-left: var(--spacing-1);
+  padding-right: var(--spacing-1);
+  padding-top: var(--spacing-1);
+  padding-bottom: var(--spacing-1);
+}
+
+.button {
+  /* Default Variant: secondary */
+  background-color: var(--color-stone-100);
+  color: var(--color-gray-950);
+  border: 2px solid var(--color-zinc-700);
+}
+
+.button:hover:not(:disabled) {
+  background-color: var(--color-stone-300);
+}
+
+.button[data-variant="primary"] {
+  background-color: var(--color-green-500);
+  color: var(--color-white);
+  border: none;
+}
+.button[data-variant="primary"]:hover:not(:disabled) {
+  background-color: var(--color-green-700);
+}
+
+.button[data-variant="destructive"] {
+  background-color: var(--color-red-500);
+  color: var(--color-white);
+  border: none;
+}
+
+.button[data-variant="destructive"]:hover:not(:disabled) {
+  background-color: var(--color-red-400);
+}
+
+.button[data-variant="tertiary"] {
+  background-color: var(--color-transparent);
+  color: var(--color-white);
+  border: none;
+  box-shadow: var(--shadow-none);
+}
+
+.button[data-variant="tertiary"]:hover:not(:disabled) {
+  background-color: rgba(245, 245, 244, 0.1); /* stone-100 with 10% opacity */
+}
+
+.button:disabled {
+  background-color: var(--color-stone-500);
+  border-color: var(--color-stone-500);
+}
+
+.button[data-variant="tertiary"]:disabled {
+  background-color: var(--color-transparent);
+  border: none;
+  color: var(--color-gray-500);
+}
+
+.unpressable {
+  opacity: 0.2;
+}
+
+.buttonNotificationDot {
+  position: absolute;
+  --dot-width: 1.525rem;
+  top: calc(-1 * var(--dot-width) / 2);
+  right: calc(-1 * var(--dot-width) / 2);
+  width: var(--dot-width);
+  height: var(--dot-width);
+
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-red-600);
+  font-size: var(--text-base);
+  font-weight: var(--font-bold);
+  color: var(--color-white);
+  padding-bottom: 0.0825rem;
+}

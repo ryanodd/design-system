@@ -1,0 +1,41 @@
+.menuButtonContent {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-1_5);
+}
+
+.menuButtonItem {
+  color: var(--color-neutral-950);
+  display: flex;
+  align-items: center;
+  font-size: var(--text-base);
+  padding-left: var(--spacing-2_5);
+  padding-right: var(--spacing-2_5);
+  padding-top: var(--spacing-5);
+  padding-bottom: var(--spacing-5);
+  border-radius: var(--radius-md);
+  line-height: var(--leading-none);
+  height: 25px;
+  position: relative;
+  user-select: none;
+  outline: none;
+}
+
+.menuButtonItem[data-disabled] {
+  color: var(--color-neutral-400);
+  pointer-events: none;
+}
+
+.menuButtonItem:hover:not([data-disabled]) {
+  background-color: var(--color-sky-300);
+  cursor: pointer;
+}
+
+.menuButtonItem.focus-visible,
+.menuButtonItem:focus-visible {
+  background-color: var(--color-sky-300);
+}
+
+.menuButtonArrow {
+  fill: white;
+}

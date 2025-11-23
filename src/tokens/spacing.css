@@ -1,0 +1,28 @@
+:root {
+  /* Spacing scale (based on Tailwind's 0.25rem = 4px base) */
+  --spacing-0: 0;
+  --spacing-0_5: 0.125rem; /* 2px */
+  --spacing-1: 0.25rem; /* 4px */
+  --spacing-1_5: 0.375rem; /* 6px */
+  --spacing-2: 0.5rem; /* 8px */
+  --spacing-2_5: 0.625rem; /* 10px */
+  --spacing-3: 0.75rem; /* 12px */
+  --spacing-4: 1rem; /* 16px */
+  --spacing-5: 1.25rem; /* 20px */
+  --spacing-6: 1.5rem; /* 24px */
+  --spacing-8: 2rem; /* 32px */
+  --spacing-10: 2.5rem; /* 40px */
+  --spacing-12: 3rem; /* 48px */
+  --spacing-16: 4rem; /* 64px */
+
+  /* Size scale for widths/heights */
+  --size-3: 0.75rem; /* 12px */
+  --size-4: 1rem; /* 16px */
+  --size-5: 1.25rem; /* 20px */
+  --size-6: 1.5rem; /* 24px */
+  --size-8: 2rem; /* 32px */
+  --size-10: 2.5rem; /* 40px */
+  --size-12: 3rem; /* 48px */
+  --size-16: 4rem; /* 64px */
+}
+

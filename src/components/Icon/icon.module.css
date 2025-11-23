@@ -1,0 +1,50 @@
+.icon {
+  max-width: none;
+  flex-shrink: 0;
+}
+
+.icon[data-size="2xs"] {
+  width: var(--size-3);
+  height: var(--size-3);
+}
+
+.icon[data-size="xs"] {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.icon[data-size="sm"] {
+  width: var(--size-4);
+  height: var(--size-4);
+}
+
+.icon[data-size="md"] {
+  width: var(--size-5);
+  height: var(--size-5);
+}
+
+.icon {
+  /* Default data-size="lg" */
+  width: var(--size-6);
+  height: var(--size-6);
+}
+
+.icon[data-size="xl"] {
+  width: var(--size-8);
+  height: var(--size-8);
+}
+
+.icon[data-size="2xl"] {
+  width: var(--size-10);
+  height: var(--size-10);
+}
+
+.icon[data-size="3xl"] {
+  width: var(--size-12);
+  height: var(--size-12);
+}
+
+.icon[data-size="4xl"] {
+  width: var(--size-16);
+  height: var(--size-16);
+}
