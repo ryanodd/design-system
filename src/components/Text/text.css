@@ -1,0 +1,164 @@
+/*
+    Apply these classes to the appropriate html elements.
+    e.g. <h1 className="header-1 text-color-primary">
+*/
+
+/* Headers
+   Primary content titles - largest and boldest text for main headings.
+   Use for page titles, article headlines, and major section headings.
+*/
+.header-1 {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--leading-tight);
+}
+
+.header-2 {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--leading-tight);
+}
+
+.header-3 {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--leading-tight);
+}
+
+.header-4 {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--leading-normal);
+}
+
+.header-5 {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--leading-normal);
+}
+
+.header-6 {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--leading-normal);
+}
+
+/* Body text
+   Main content text - readable sizes for paragraphs and body content.
+   Use for articles, descriptions, and general content. Semibold variants
+   are available for emphasis within body text.
+*/
+.body-1 {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-normal);
+    line-height: var(--leading-normal);
+}
+
+.body-2 {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-normal);
+    line-height: var(--leading-normal);
+}
+
+.body-1-semibold {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--leading-normal);
+}
+
+.body-2-semibold {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--leading-normal);
+}
+
+/* Subtitle
+   Secondary headings that support main headers. Medium weight provides
+   hierarchy without competing with primary headings.
+   Use for: section introductions, article bylines, card titles, form section headers.
+*/
+.subtitle-1 {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--leading-normal);
+}
+
+.subtitle-2 {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--leading-normal);
+}
+
+/* Caption
+   Small supporting text, metadata, or annotations. Smallest readable size,
+   unobtrusive, provides context without drawing attention.
+   Use for: image captions, timestamps, copyright notices, helper text,
+   disclaimers, table footnotes.
+*/
+.caption-1 {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-normal);
+    line-height: var(--leading-normal);
+}
+
+.caption-2 {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-normal);
+    line-height: var(--leading-normal);
+}
+
+/* Label
+   Short, scannable identifiers for UI elements. Semibold weight for emphasis,
+   designed to be quickly scannable.
+   Use for: form field labels, button text, navigation items, tags, badges,
+   table column headers.
+*/
+.label-1 {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--leading-normal);
+}
+
+.label-2 {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--leading-normal);
+}
+
+/* Text colors */
+
+.text-color-primary {
+    color: var(--color-text-primary);
+}
+
+.text-color-secondary {
+    color: var(--color-text-secondary);
+}
+
+.text-color-tertiary {
+    color: var(--color-text-tertiary);
+}
+
+.text-color-inverted {
+    color: var(--color-text-inverted);
+}
+
+.text-color-brand {
+    color: var(--color-text-brand);
+}
+
+.text-color-error {
+    color: var(--color-text-error);
+}
+
+.text-color-success {
+    color: var(--color-text-success);
+}
+
+.text-color-warning {
+    color: var(--color-text-warning);
+}
+
+.text-color-disabled {
+    color: var(--color-text-disabled);
+}

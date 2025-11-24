@@ -18,8 +18,10 @@ import PencilSvg from "./icons/pencil.svg"
 
 import iconStyles from "./icon.module.css"
 
+export const iconSizes = ["xs", "sm", "md", "lg", "xl", "2xl", "3xl", "4xl"] as const
+
 export type IconProps = ComponentPropsWithoutRef<"svg"> & {
-  size?: "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl"
+  size?: typeof iconSizes[number]
 }
 
 export const createIcon = (SVG: ComponentType<HTMLAttributes<SVGSVGElement>>, label: string) => {

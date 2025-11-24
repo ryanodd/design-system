@@ -1,9 +1,8 @@
 import * as RadixToast from "@radix-ui/react-toast"
-import { ComponentPropsWithoutRef, forwardRef, ReactNode } from "react"
+import { forwardRef, ReactNode } from "react"
 
 import styles from "./Toast.module.css"
-import { Close } from "./Icon"
-import { Button } from "./Button"
+import { Button } from "../Button"
 
 export type ToastProviderProps = RadixToast.ToastProviderProps
 
@@ -29,21 +28,21 @@ export const Toast = forwardRef<HTMLLIElement, ToastProps>(
   ({ toastTitle, toastDescription, toastAction, ...props }, ref) => {
     return (
       <RadixToast.Root className={styles.toast} ref={ref} {...props}>
-        <RadixToast.Title className={styles.toastTitle}>{toastTitle}</RadixToast.Title>
-        {toastDescription && (
-          <RadixToast.Description className={styles.toastDescription} asChild>
-            {toastDescription}
-          </RadixToast.Description>
-        )}
+        <div className={styles.toastContent}>
+          <RadixToast.Title className={styles.toastTitle}>{toastTitle}</RadixToast.Title>
+          {toastDescription && (
+            <RadixToast.Description className={styles.toastDescription}>
+              {toastDescription}
+            </RadixToast.Description>
+          )}
+        </div>
         {toastAction && (
           <RadixToast.Action className={styles.toastAction} asChild altText="Toast action">
             {toastAction}
           </RadixToast.Action>
         )}
         <RadixToast.Close asChild>
-          <Button data-variant="tertiary" data-icon-only>
-            <Close />
-          </Button>
+          <Button variant="tertiary" iconOnly icon="Close" />
         </RadixToast.Close>
       </RadixToast.Root>
     )

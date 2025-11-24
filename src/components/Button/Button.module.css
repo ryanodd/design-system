@@ -1,5 +1,4 @@
 .button {
-  box-shadow: var(--shadow-sm);
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -8,6 +7,19 @@
   gap: var(--spacing-2);
 }
 
+.button:not(:disabled) {
+  cursor: pointer;
+}
+
+/* Press effect - display a shadow when the button isn't being pressed */
+.button:not(:active),
+.button:disabled {
+  box-shadow: var(--shadow-sm);
+}
+
+
+/* Sizes */
+
 .button {
   /* Default size: small */
   padding-top: var(--spacing-1_5);
@@ -15,10 +27,30 @@
   padding-left: var(--spacing-3);
   padding-right: var(--spacing-3);
   border-radius: var(--radius-md);
-  font-size: var(--text-base);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
 }
 
 .button[data-icon-only="true"] {
+  width: var(--size-8);
+  height: var(--size-8);
+  padding-left: var(--spacing-1);
+  padding-right: var(--spacing-1);
+  padding-top: var(--spacing-1);
+  padding-bottom: var(--spacing-1);
+}
+
+.button[data-size="medium"] {
+  padding-top: var(--spacing-2);
+  padding-bottom: var(--spacing-2);
+  padding-left: var(--spacing-4);
+  padding-right: var(--spacing-4);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+}
+
+.button[data-icon-only="true"][data-size="medium"] {
   width: var(--size-10);
   height: var(--size-10);
   padding-left: var(--spacing-1);
@@ -28,13 +60,13 @@
 }
 
 .button[data-size="large"] {
-  padding-top: var(--spacing-3);
-  padding-bottom: var(--spacing-3);
-  padding-left: var(--spacing-6);
-  padding-right: var(--spacing-6);
-  border-radius: var(--radius-lg);
-  font-size: var(--text-xl);
-  font-weight: var(--font-semibold);
+  padding-top: var(--spacing-2);
+  padding-bottom: var(--spacing-2);
+  padding-left: var(--spacing-5);
+  padding-right: var(--spacing-5);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
 }
 
 .button[data-icon-only="true"][data-size="large"] {
@@ -46,61 +78,67 @@
   padding-bottom: var(--spacing-1);
 }
 
+/* Variants */
+
+/* Default Variant: secondary */
 .button {
-  /* Default Variant: secondary */
-  background-color: var(--color-stone-100);
-  color: var(--color-gray-950);
-  border: 2px solid var(--color-zinc-700);
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border-secondary);
+  color: var(--color-text-secondary);
 }
 
 .button:hover:not(:disabled) {
-  background-color: var(--color-stone-300);
+  background-color: var(--color-bg-tertiary);
+}
+
+.button:active {
+  background-color: var(--color-bg-quaternary);
 }
 
 .button[data-variant="primary"] {
-  background-color: var(--color-green-500);
-  color: var(--color-white);
+  background-color: var(--color-bg-brand);
+  color: var(--color-text-inverted);
   border: none;
 }
+
 .button[data-variant="primary"]:hover:not(:disabled) {
-  background-color: var(--color-green-700);
+  background-color: var(--color-bg-brand-hover);
 }
 
 .button[data-variant="destructive"] {
-  background-color: var(--color-red-500);
-  color: var(--color-white);
+  background-color: var(--color-text-error);
+  color: var(--color-text-inverted);
   border: none;
 }
 
 .button[data-variant="destructive"]:hover:not(:disabled) {
-  background-color: var(--color-red-400);
+  background-color: var(--color-bg-error-hover);
 }
 
 .button[data-variant="tertiary"] {
   background-color: var(--color-transparent);
-  color: var(--color-white);
+  color: var(--color-text-secondary);
   border: none;
   box-shadow: var(--shadow-none);
 }
 
 .button[data-variant="tertiary"]:hover:not(:disabled) {
-  background-color: rgba(245, 245, 244, 0.1); /* stone-100 with 10% opacity */
+  background-color: rgba(0, 0, 0, 0.0625);
 }
 
 .button:disabled {
-  background-color: var(--color-stone-500);
-  border-color: var(--color-stone-500);
+  background-color: var(--color-bg-disabled);
+  border-color: var(--color-border-disabled);
+  color: var(--color-text-disabled);
 }
 
 .button[data-variant="tertiary"]:disabled {
   background-color: var(--color-transparent);
   border: none;
-  color: var(--color-gray-500);
+  color: var(--color-text-disabled);
 }
 
-.unpressable {
-  opacity: 0.2;
-}
+/* Notification Dot */
 
 .buttonNotificationDot {
   position: absolute;
@@ -114,9 +152,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-red-600);
-  font-size: var(--text-base);
-  font-weight: var(--font-bold);
-  color: var(--color-white);
+  background-color: var(--color-text-error);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-inverted);
   padding-bottom: 0.0825rem;
 }

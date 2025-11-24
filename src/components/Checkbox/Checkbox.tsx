@@ -1,5 +1,6 @@
 import * as RadixCheckbox from "@radix-ui/react-checkbox"
 import styles from "./Checkbox.module.css"
+import { Check } from "../Icon"
 import { ReactNode } from "react"
 
 export type CheckboxProps = {
@@ -22,7 +23,7 @@ export const Checkbox = ({ id, labelContent, checked, onClick }: CheckboxProps) 
         id={id}
       >
         <RadixCheckbox.Indicator className={styles.checkboxIndicator}>
-          <div className={styles.checkboxCheckmarkIcon} />
+          <Check className={styles.checkboxCheckmarkIcon} />
         </RadixCheckbox.Indicator>
       </RadixCheckbox.Root>
       <label className={styles.checkboxLabel} htmlFor={id}>

@@ -1,38 +1,36 @@
-import * as Dialog from "@radix-ui/react-dialog"
-import styles from "../designSystem/Dialog.module.css"
-import { useGameStore } from "../../hooks/useGameStore"
-import { ReactNode, useEffect, useState } from "react"
-import { Button } from "../designSystem/Button"
-import { Close } from "../designSystem/Icon"
-
-export type DefaultDialogProps = Dialog.DialogProps & {
+import * as RadixDialog from "@radix-ui/react-dialog"
+import styles from "./Dialog.module.css"
+import { ReactNode } from "react"
+import { Close } from "../Icon"
+import { Button } from "../Button"
+export type DialogProps = RadixDialog.DialogProps & {
   title: ReactNode
   trigger: ReactNode
   content: ReactNode
 }
 
-export const DefaultDialog = ({ trigger, content, title, ...props }: DefaultDialogProps) => {
+export const Dialog = ({ trigger, content, title, ...props }: DialogProps) => {
   return (
-    <Dialog.Root {...props}>
-      <Dialog.Trigger asChild>{trigger}</Dialog.Trigger>
-      <Dialog.Portal>
-        <Dialog.Overlay className={`${styles.dialogOverlay}`} />
-        <Dialog.Content
+    <RadixDialog.Root {...props}>
+      <RadixDialog.Trigger asChild>{trigger}</RadixDialog.Trigger>
+      <RadixDialog.Portal>
+        <RadixDialog.Overlay className={`${styles.dialogOverlay}`} />
+        <RadixDialog.Content
           className={styles.dialogContent}
           onPointerDownOutside={(event) => {
             event?.preventDefault()
           }}
           data-size="md"
         >
-          <Dialog.Close asChild>
-            <Button className={`${styles.dialogCloseButton}`} data-variant="tertiary" data-icon-only>
+          <RadixDialog.Close asChild>
+            <Button className={`${styles.dialogCloseButton}`} variant="tertiary" iconOnly>
               <Close />
             </Button>
-          </Dialog.Close>
-          <Dialog.Title className={styles.dialogTitle}>{title}</Dialog.Title>
+          </RadixDialog.Close>
+          <RadixDialog.Title className={styles.dialogTitle}>{title}</RadixDialog.Title>
           {content}
-        </Dialog.Content>
-      </Dialog.Portal>
-    </Dialog.Root>
+        </RadixDialog.Content>
+      </RadixDialog.Portal>
+    </RadixDialog.Root>
   )
 }

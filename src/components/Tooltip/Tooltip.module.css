@@ -1,0 +1,14 @@
+.tooltipContent {
+    background-color: var(--color-bg-tooltip);
+    color: var(--color-text-inverted);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-2) var(--spacing-3);
+    font-size: var(--font-size-xs);
+    line-height: var(--leading-tight);
+    box-shadow: var(--shadow-sm);
+    z-index: 50;
+}
+
+.tooltipArrow {
+    fill: var(--color-bg-tooltip);
+}
