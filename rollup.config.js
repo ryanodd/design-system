@@ -2,6 +2,8 @@ import typescript from "@rollup/plugin-typescript"
 import resolve from "@rollup/plugin-node-resolve"
 import commonjs from "@rollup/plugin-commonjs"
 import dts from "rollup-plugin-dts"
+import postcss from "rollup-plugin-postcss"
+import svgr from "@svgr/rollup"
 
 // List all external dependencies to prevent them from being bundled
 const external = [
@@ -28,10 +30,17 @@ const config = [
     ],
     external: external,
     plugins: [
+      // Handles CSS modules
+      postcss({
+        extract: "index.css",
+        minimize: true,
+      }),
       // Finds third-party modules in node_modules
       resolve(),
       // Converts CommonJS dependencies to ES Modules
       commonjs(),
+      // Handles SVGs
+      svgr({ icon: true }),
       // Compiles TypeScript/JSX
       typescript({ tsconfig: "./tsconfig.json" }),
     ],

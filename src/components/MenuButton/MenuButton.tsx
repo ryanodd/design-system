@@ -1,7 +1,7 @@
 import * as RadixMenuButton from "@radix-ui/react-dropdown-menu"
 import { Button } from "../Button"
 import styles from "./MenuButton.module.css"
-import { Menu } from "../Icon"
+
 import { ReactNode } from "react"
 
 export type MenuButtonProps = React.ComponentPropsWithoutRef<typeof RadixMenuButton.Root> & {

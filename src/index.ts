@@ -1,3 +1,5 @@
+import "./index.css"
+
 // Components
 export * from "./components/Button"
 export * from "./components/Checkbox"

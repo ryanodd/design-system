@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ReactElement, ReactNode, forwardRef } from "react"
+import { ComponentPropsWithoutRef, ReactNode, forwardRef } from "react"
 import styles from "./Button.module.css"
 import { IconMap } from "../Icon/Icon"
 import { Spinner } from "../Spinner/Spinner"
